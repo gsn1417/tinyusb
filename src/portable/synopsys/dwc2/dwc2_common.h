@@ -64,6 +64,8 @@
   #include "dwc2_at32.h"
 #elif defined(TUP_USBIP_DWC2_NRF)
   #include "dwc2_nrf.h"
+#elif TU_CHECK_MCU(OPT_MCU_ZEUS)
+  #include "dwc2_zeus.h"
 #else
   #error "Unsupported MCUs"
 #endif

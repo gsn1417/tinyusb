@@ -723,6 +723,14 @@
 
   #define TU_ATTR_FAST_FUNC __attribute__((section(".fast")))
 
+//--------------------------------------------------------------------+
+// Yeats Zeus (Synopsys DWC2 OTG, external ULPI USB3320; runs full-speed)
+//--------------------------------------------------------------------+
+#elif TU_CHECK_MCU(OPT_MCU_ZEUS)
+  #define TUP_USBIP_DWC2
+  #define TUP_DCD_ENDPOINT_MAX    8   // hw GHWCFG2 reports 8; loopback iso uses EP5/EP6
+  // no TUP_RHPORT_HIGHSPEED: FS link over the ULPI PHY
+
 #endif
 
 // External USB controller

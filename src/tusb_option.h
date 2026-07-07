@@ -223,6 +223,9 @@
 // HPMicro
 #define OPT_MCU_HPM              2600  ///< HPMicro
 
+// Yeats (out-of-tree port; 2600 is taken by HPM so use 2601)
+#define OPT_MCU_ZEUS             2601  ///< Yeats Zeus SoC (Synopsys DWC2 OTG)
+
 // Check if configured MCU is one of listed
 // Apply TU_MCU_IS_EQUAL with || as separator to list of input
 #define TU_MCU_IS_EQUAL(_m)  (CFG_TUSB_MCU == (_m))
